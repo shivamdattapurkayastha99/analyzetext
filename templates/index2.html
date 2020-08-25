@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template is working</title>
+</head>
+<body>
+    <!-- i am a launda
+    {{name}} is from {{place}} -->
+    <h1>welcome  to text analyser enter your text</h1>
+    <form action="/analyze" method="POST">{% csrf_token %}
+        <textarea name="text" style="margin: 0px;width: 721px; height: 93px;"></textarea>
+        <input type="checkbox" name="removepunc" id="">Remove punctuations <br>
+        <input type="checkbox" name="fullcaps" id="">Uppercase <br>
+        <input type="checkbox" name="newlineremover" id="">newlineremover <br>
+        <input type="checkbox" name="extraspacremover" id="">extraspaceeremover <br>
+        <!-- <input type="checkbox" name="charcount" id="">charcount <br> -->
+        <button type="submit">Analyze text</button>
+    </form>
+</body>
+</html>
